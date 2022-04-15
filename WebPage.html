@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список дел</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<section aria-labelledby="todo-list">
+    <h1 id="todo-list">Список дел</h1>
+    <form>
+        <input id="input-list" type="text" placeholder="Новая запись"/>
+        <button id="event-handler" type="button"> Добавить </button>
+        <ul class="todo-text">
+            <li><label>Купить помидоры<input type="checkbox"/></label></li>
+            <li><label>Купить яйца<input type="checkbox"/></label></li>
+        </ul>
+        <script>
+            const element = document.getElementById("event-handler");
+            element.addEventListener("click", () => {
+                let article_ul = document.querySelector("ul.todo-text");
+                let elem = document.createElement("li");
+                let inputText = document.querySelector('input');
+                let elemText = document.createTextNode(inputText.value);
+                elem.appendChild(elemText);
+                //const arr = new Array().fill(elem);
+                article_ul.appendChild(elem);
+            });
+        </script>
+    </form>
+</section>
+</body>
+</html>

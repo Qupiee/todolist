@@ -1,0 +1,16 @@
+body {
+	position: relative;
+	font-family: 'Comfortaa', cursive;
+	font-size: 18px;
+	line-height: 1.4;
+	background: pink;
+	color: deeppink;
+	min-width: 320px;
+	overflow-x: hidden;
+	height: auto;
+}
+
+::-webkit-input-placeholder {
+	color: black;
+	font-style: italic;
+}
